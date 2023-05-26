@@ -19,25 +19,25 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-treesitter/nvim-treesitter'
   use {"akinsho/toggleterm.nvim", tag = '*', 
-        config = function()
-            require("toggleterm").setup()
-        end}
+  config = function()
+    require("toggleterm").setup()
+  end}
   use 'williamboman/mason.nvim'  
   use {
-     'nvim-telescope/telescope.nvim', tag = '0.1.1',
-     requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
     "loctvl842/monokai-pro.nvim",
-	config = function()
-       require("monokai-pro").setup()
+    config = function()
+      require("monokai-pro").setup()
     end
   }
-  
+
   use {'akinsho/bufferline.nvim', 
-       tag = "*", 
-       requires = 'nvim-tree/nvim-web-devicons'
-     }
+  tag = "*",
+  requires = 'nvim-tree/nvim-web-devicons'
+}
 
 use {
   'VonHeikemen/lsp-zero.nvim',
@@ -46,24 +46,36 @@ use {
     -- LSP Support
     {'neovim/nvim-lspconfig'},             -- Required
     {                                      -- Optional
-      'williamboman/mason.nvim',
-      run = function()
-        pcall(vim.cmd, 'MasonUpdate')
-      end,
-    },
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    'williamboman/mason.nvim',
+    run = function()
+      pcall(vim.cmd, 'MasonUpdate')
+    end,
+  },
+  {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},     -- Required
-    {'hrsh7th/cmp-nvim-lsp'}, -- Required
-    {'L3MON4D3/LuaSnip'},     -- Required
-  }
+  -- Autocompletion
+  {'hrsh7th/nvim-cmp'},     -- Required
+  {'hrsh7th/cmp-nvim-lsp'}, -- Required
+  {'L3MON4D3/LuaSnip'},     -- Required
+}
 }
 
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
+use {
+  "folke/which-key.nvim",
+  config = function()
+    vim.o.timeout = true
+    vim.o.timeoutlen = 300
+    require("which-key").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
   end
+}
+
+-- Automatically set up your configuration after cloning packer.nvim
+-- Put this at the end after all plugins
+if packer_bootstrap then
+  require('packer').sync()
+end
 end)

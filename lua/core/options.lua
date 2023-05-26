@@ -1,6 +1,12 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
+vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
+vim.opt.mouse = "v"                             -- allow the mouse to be used in neovim
+vim.opt.wrap = true                            -- display lines as one long line
+vim.opt.scrolloff = 8                           -- is one of my fav
+
 vim.opt.backspace = '2'
 vim.opt.showcmd = true
 vim.opt.laststatus = 2
