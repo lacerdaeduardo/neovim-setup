@@ -21,12 +21,11 @@ require("monokai-pro").setup({
   },
   inc_search = "background", -- underline | background
   background_clear = {
-    -- "float_win",
     "toggleterm",
     "telescope",
     "which-key",
     "renamer"
-  },-- "float_win", "toggleterm", "telescope", "which-key", "renamer", "neo-tree"
+  },
   plugins = {
     bufferline = {
       underline_selected = false,
@@ -41,4 +40,6 @@ require("monokai-pro").setup({
   override = function(c) end,
 })
 
-vim.cmd([[colorscheme monokai-pro]])
+
+
+--vim.cmd([[colorscheme monokai-pro]])

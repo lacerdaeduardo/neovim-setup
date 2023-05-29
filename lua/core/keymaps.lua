@@ -20,14 +20,14 @@ keymap("n", "<S-kMinus>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-kPlus>", ":vertical resize +2<CR>", opts)
 
 -- Editor
-vim.keymap.set('n', '<c-e>', ':NvimTreeFindFileToggle<CR>')
+keymap('n', '<C-e>', ':NvimTreeFindFileToggle<CR>', opts)
 
 -- Terminal
-vim.keymap.set("n", "<leader>nt", "<CMD>:ToggleTerm<CR>")
+keymap("n", "<leader>nt", "<CMD>:ToggleTerm<CR>", opts)
 
 -- Tab navigation
-vim.keymap.set("n", "<Tab>", ":bnext<CR>")
-vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")
+keymap("n", "<Tab>", ":bnext<CR>", opts)
+keymap("n", "<S-Tab>", ":bprev<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<C-j>", "<Esc>:m .+1<CR>==", opts)
