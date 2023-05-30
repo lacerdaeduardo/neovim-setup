@@ -21,7 +21,12 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.cmd [[ set noswapfile ]]
+vim.cmd [[ set autochdir ]]
 
 --Line numbers
 vim.wo.number = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.g.terminal_emulator="iTerm.app"
+vim.g.rainbow_active = true
 

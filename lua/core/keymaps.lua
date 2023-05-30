@@ -1,8 +1,8 @@
-local opts = { noremap = true, silent = true }
+opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+keymap = vim.api.nvim_set_keymap
 
 -- Modes
 --   normal_mode = "n",
@@ -12,15 +12,6 @@ local keymap = vim.api.nvim_set_keymap
 --   term_mode = "t",
 --   command_mode = "c",
 
-
--- Resize with arrows
-keymap("n", "<C-kPlus>", ":resize +2<CR>", opts)
-keymap("n", "<C-kMinus>", ":resize -2<CR>", opts)
-keymap("n", "<S-kMinus>", ":vertical resize -2<CR>", opts)
-keymap("n", "<S-kPlus>", ":vertical resize +2<CR>", opts)
-
--- Editor
-keymap('n', '<C-e>', ':NvimTreeFindFileToggle<CR>', opts)
 
 -- Terminal
 keymap("n", "<leader>nt", "<CMD>:ToggleTerm<CR>", opts)
@@ -40,4 +31,18 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<C-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<C-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- Editor
+keymap('n', '<C-e>', ':NvimTreeFindFileToggle<CR>', opts)
+
+-- Terminal
+keymap("n", "<leader>nt", "<CMD>:ToggleTerm<CR>", opts)
+
+
+
+
+
+
+
+
 

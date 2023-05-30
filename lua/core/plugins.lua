@@ -105,8 +105,16 @@ return require('packer').startup(function(use)
 
   use 'preservim/nerdcommenter'
   use 'theprimeagen/harpoon'
-  use("mbbill/undotree")
+  use 'mbbill/undotree'
+  use 'github/copilot.vim'
 
+  -- clojure tools
+  use 'Olical/conjure'
+  use 'clojure-vim/vim-jack-in'
+  use 'tpope/vim-dispatch'
+  use 'PaterJason/cmp-conjure'
+  use { 'm00qek/baleia.nvim', tag = 'v1.3.0' }
+  use 'luochen1990/rainbow'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
